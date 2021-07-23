@@ -4,6 +4,7 @@ class CalendarsController < ApplicationController
   def index
     getWeek
     @plan = Plan.new
+    @plans = Plan.all
   end
 
   # 予定の保存
@@ -17,7 +18,7 @@ class CalendarsController < ApplicationController
   def plan_params
     params.require(:plan).permit(:date, :plan)
   end
-
+  
   def getWeek
     wdays = ['(日)','(月)','(火)','(水)','(木)','(金)','(土)']
 

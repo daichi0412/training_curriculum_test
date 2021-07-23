@@ -10,6 +10,8 @@
 <div>
   <div class='calendar'>
     <% @week_days.each do |day| %>
+      <%= @plan.date %>
+      <%= @plan.plan %>
       <div class='item'>
         <div class='date'>
           <% day[:month] %>/<% day[:date] %>
